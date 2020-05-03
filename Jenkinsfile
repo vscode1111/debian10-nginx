@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  environment {
-    HOME = '.'
-  }
   stages {
     stage('Nginx stop'){
       steps {
