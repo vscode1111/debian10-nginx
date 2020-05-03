@@ -12,7 +12,7 @@ pipeline {
     stage('Nginx start'){
       steps {
         timeout(time: 3, unit: 'MINUTES') {
-          sh 'service nginx star'
+          sh 'service nginx start'
         }
       }
     }
