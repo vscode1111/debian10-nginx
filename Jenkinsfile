@@ -12,7 +12,7 @@ pipeline {
     stage('Copy configs'){
       steps {
         timeout(time: 1, unit: 'MINUTES') {
-          sh 'cp /var/lib/jenkins/workspace/debian10-nginx/conf.d /etc/nginx/temp'
+          sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/conf.d /etc/nginx'
         }
       }
     }  
