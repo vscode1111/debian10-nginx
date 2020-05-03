@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    // stage('Nginx stop'){
-    //   steps {
-    //     timeout(time: 1, unit: 'MINUTES') {
-    //       sh 'service nginx stop'
-    //     }
-    //   }
-    // } 
+    stage('Nginx stop'){
+      steps {
+        timeout(time: 1, unit: 'MINUTES') {
+          sh 'service nginx stop'
+        }
+      }
+    } 
 
     stage('Copy configs'){
       steps {
@@ -17,12 +17,12 @@ pipeline {
       }
     }  
     
-    // stage('Nginx start'){
-    //   steps {
-    //     timeout(time: 1, unit: 'MINUTES') {
-    //       sh 'service nginx start'
-    //     }
-    //   }
-    // }
+    stage('Nginx start'){
+      steps {
+        timeout(time: 1, unit: 'MINUTES') {
+          sh 'service nginx start'
+        }
+      }
+    }
   }
 }
