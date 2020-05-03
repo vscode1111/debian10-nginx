@@ -7,8 +7,7 @@ pipeline {
           sh 'service nginx stop'
         }
       }
-    }
-    
+    }    
 
     stage('Nginx start'){
       steps {
