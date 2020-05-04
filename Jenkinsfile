@@ -13,7 +13,7 @@ pipeline {
       steps {
         timeout(time: 1, unit: 'MINUTES') {
           sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/conf.d /etc/nginx'
-          sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/certs /etc/nginx'
+          sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/serts /etc/nginx'
         }
       }
     }  
