@@ -12,8 +12,8 @@ pipeline {
     stage('Copy configs'){
       steps {
         timeout(time: 1, unit: 'MINUTES') {
-          sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/conf.d /etc/nginx'
-          sh 'cp -r /var/lib/jenkins/workspace/debian10-nginx/serts /etc/nginx'
+          sh 'cp -r /var/lib/jenkins/workspace/nginx/conf.d /etc/nginx'
+          sh 'cp -r /var/lib/jenkins/workspace/nginx/serts /etc/nginx'
         }
       }
     }  
