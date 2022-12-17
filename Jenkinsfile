@@ -1,14 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Docker prune'){
-      steps {
-        timeout(time: 3, unit: 'MINUTES') {
-          sh 'docker system prune -a -f'
-        }
-      }
-    }
-
     stage('Nginx stop'){
       steps {
         timeout(time: 1, unit: 'MINUTES') {
